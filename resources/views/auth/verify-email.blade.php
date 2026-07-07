@@ -23,9 +23,13 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
+            <button type="submit" class="underline text-sm hover:text-blue-500 rounded-md">
                 {{ __('Log Out') }}
             </button>
         </form>
     </div>
+
+    <a href="/" class="underline text-sm hover:text-blue-500 rounded-md flex mt-10">
+        &larr; Back To BeasiswaTrack
+    </a>
 </x-guest-layout>
