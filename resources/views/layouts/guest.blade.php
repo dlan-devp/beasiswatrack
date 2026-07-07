@@ -51,7 +51,6 @@
                     </path>
                 </svg>
             </div>
-
         </div>
 
         {{-- RIGHT --}}
