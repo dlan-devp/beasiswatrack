@@ -56,15 +56,12 @@
 
         {{-- RIGHT --}}
         <div class="p-10 md:p-14 flex items-center justify-center bg-white mt-10">
-
             <div class="w-full max-w-md">
 
                 {{ $slot }}
 
             </div>
-
         </div>
-
     </div>
 
 </body>
