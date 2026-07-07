@@ -1,11 +1,6 @@
 <x-guest-layout>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <div class="text-2xl font-bold text-blue-600 flex justify-center items-center mb-10 mt-5">
-        <a href="{{ Route('scholarships.index') }}">
-            <i class="fas fa-graduation-cap"></i> BeasiswaTrack 
-        </a>
-    </div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -34,18 +29,20 @@
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                <input id="remember_me" type="checkbox" class="rounded text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600" name="remember">
+                <span class="ms-2 text-sm">{{ __('Remember me') }}</span>
             </label>
         </div>
 
+        {{-- forgot pw --}}
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                <a class="underline text-sm text-gray-600 dark:text-black hover:text-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
+            {{-- button login regist --}}
             <x-primary-button class="ms-3 mr-2">
                 {{ __('Log in') }}
             </x-primary-button>
@@ -57,6 +54,8 @@
             </a>
         </div>
     </form>
+
+    {{-- back to website --}}
     <div class="mt-10 mb-5 flex justify-center items-center">
         <a href="{{ route('scholarships.index') }}">
             <x-secondary-button>

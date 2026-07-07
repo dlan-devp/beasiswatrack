@@ -1,10 +1,5 @@
 <x-guest-layout>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <div class="text-2xl font-bold text-blue-600 flex justify-center items-center mb-10 mt-5">
-        <a href="{{ Route('scholarships.index') }}">
-            <i class="fas fa-graduation-cap"></i> BeasiswaTrack 
-        </a>
-    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -46,7 +41,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+            <a class="underline text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 hover:text-blue-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
